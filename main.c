@@ -1,6 +1,13 @@
 #include "common.h"
+#include "chunk.h"
+#include "deb
 
-int main() {
-    printf("Hello, World!\n");
+int main(int argc, const char* argv[]) {
+    Chunk chunk;
+    init_chunk(&chunk);
+    write_chunk(&chunk, OP_RETURN);
+
+    disassemble_chunk(&chunk, "test chunk");
+    free_chunk(&chunk);
     return 0;
 }
