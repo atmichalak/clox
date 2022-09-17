@@ -13,6 +13,11 @@ void disassemble_chunk(Chunk* chunk, const char* name) {
     }
 }
 
+static int simple_instruction(const char* name, int offset) {
+    printf("%s\n", name);
+    return offset + 1;
+}
+
 int disassemble_instruction(Chunk* chunk, int offset) {
     printf("%04d ", offset);
 
