@@ -18,5 +18,6 @@ typedef struct {
 void init_value_array(ValueArray* array);
 void write_value_array(ValueArray* array, Value value);
 void free_value_array(ValueArray* array);
+void print_value(Value value);
 
 #endif //CLOX_VALUE_H
